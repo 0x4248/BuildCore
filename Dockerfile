@@ -39,7 +39,6 @@ RUN apt-get install -y git fish vim nano curl wget neovim
 # also might ask why not update .bashrc? Well, If a script uses sh instead of bash
 # then it will not work. So, we are creating symlinks for python and pip.
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 WORKDIR /root 
 
