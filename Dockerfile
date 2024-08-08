@@ -17,6 +17,7 @@ RUN apt-get install -y \
     fakeroot \
     build-essential \
     ncurses-dev \
+    libncurses5-dev \
     xz-utils \
     libssl-dev \
     bc \
