@@ -15,6 +15,8 @@ ifeq ($(shell docker --version),)
 $(error "Docker is not installed")
 endif
 
+all: build-docker
+
 build-docker:
 	@echo "Building docker container for target x86_64"
 	@docker build --platform $(DOCKER-ARCH-x86_64) -t buildcore-x86_64 -f Dockerfile .
@@ -22,4 +24,5 @@ build-docker:
 	@docker build --platform $(DOCKER-ARCH-arm64) -t buildcore-arm64 -f Dockerfile .
 	@echo "Docker containers built"
 	@echo "To run the container use the following command:"
-	@echo "docker run -it --rm buildcore-x86_64"
+	@echo "docker run -it --rm -v .:/volume -w /volume buildcore-x86_64"
+	@echo "docker run -it --rm -v .:/volume -w /volume buildcore-arm64"
