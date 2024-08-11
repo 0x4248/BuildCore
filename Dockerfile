@@ -16,6 +16,7 @@ RUN apt-get update
 RUN apt-get install -y \
     fakeroot \
     build-essential \
+    nasm \
     ncurses-dev \
     libncurses5-dev \
     xz-utils \
