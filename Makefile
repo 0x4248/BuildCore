@@ -22,4 +22,4 @@ build-docker:
 	@docker build --platform $(DOCKER-ARCH-arm64) -t buildcore-arm64 -f Dockerfile .
 	@echo "Docker containers built"
 	@echo "To run the container use the following command:"
-	@echo "docker run -it --rm buildcore-x86_64 
+	@echo "docker run -it --rm buildcore-x86_64"
